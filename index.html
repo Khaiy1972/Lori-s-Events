@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loris Events</title>
+    <title>Lori's Events</title>
 
     <link rel="stylesheet" href="./CSS/style.css">
 
@@ -13,10 +13,10 @@
 
 <body>
 
-    <header>
+<header>
         <h1 class="Logo">Loris</h1>
     <nav class="navigation">
-        <a href="#">Home</a>
+        <a href= "./HTML/Home.html">Home</a>
         <a href="#">Services</a>
         <a href="#">Inquiry</a>
         <button class="btnlogin-popup">Login</button>
@@ -27,6 +27,7 @@
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
 
+        <!-- login form -->
         <div class="form-box login">
             <h2>Login</h2>
             <form action="#">
@@ -45,33 +46,60 @@
                     <a href="#">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btnLoginform">Login</button>
+                <!-- <button type="googlebtn" class="btnGoogle">Google</button> -->
+                <button class="btnGoogle" href="#"><span></span>Google</button>
+
                 <div class="login-register">
                     <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
                 </div>
             </form>
         </div>
 
+        <!-- registration form -->
         <div class="form-box register">
             <h2>Registration</h2>
             <form action="#">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" required>
-                    <label>Username</label>
+                    <label>First Name</label>
                 </div>
                 <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" > <!--remove the word required attribute -->
+                    <label>Middle Name (optional)</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Last Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="date" required>
+                    <label>Birthday</label>
+                </div>
+                <div class="input-box"> <!-- need yo change this -->
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" required>
                     <label>Email</label>
                 </div>
-                    <div class="input-box">
+                <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" id="pass" required>
                     <label>Password</label>
                 </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="confirmpass" required>
+                    <label>Confirm Password</label>
+                </div>
+
+
                 <div class="remember-forgot">
                     <label><input type="checkbox">I agree to the terms & conditions.</label>
                 </div>
+                
                 <button type="submit" class="btnLoginform">Register</button>
                 <div class="login-register">
                     <p>Already have an account?<a href="#" class="login-link">Login</a></p>

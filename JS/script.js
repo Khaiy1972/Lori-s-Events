@@ -19,3 +19,17 @@ btnPopup.addEventListener('click', ()=> {
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
 });
+
+var pass = document.getElementById("pass")
+, confirmpass = document.getElementById("confirmpass");
+
+function validatePassword(){
+if(pass.value != confirmpass.value) {
+    confirmpass.setCustomValidity("Passwords Don't Match");
+} else {
+    confirmpass.setCustomValidity('');
+}
+}
+
+pass.onchange = validatePassword;
+confirmpass.onkeyup = validatePassword;
