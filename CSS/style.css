@@ -31,10 +31,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
     min-height: 100vh;
-    background: url(../Images/weddingscene.jpg)no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 header{
@@ -105,7 +103,7 @@ header{
 .wrapper{
     position: relative;
     width: 400px;
-    height: 440px;
+    height: 500px;
     background: transparent;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
@@ -125,7 +123,7 @@ header{
 
 /*adjusting the height of the wrapper*/
 .wrapper.active{
-    height: 765px; 
+    height: 750px; 
 }
 
 .wrapper .form-box{
@@ -173,6 +171,7 @@ transform: translateX(-400px);
 
 .form-box h2{
     font-size: 2em;
+    margin-top: 20px;
     color: white;
     text-align: center;
 }
@@ -180,7 +179,7 @@ transform: translateX(-400px);
 .input-box{
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 45px;
     border-bottom: 2px solid white;
     margin: 30px 0;
 }
@@ -197,7 +196,7 @@ transform: translateX(-400px);
     transition: .5s;
 }
 
-/* height effects */
+/* height effects of input box */
 .input-box input:focus~label,
 .input-box input:valid~label {
     top: 0px;
@@ -216,6 +215,100 @@ transform: translateX(-400px);
 }
 
 .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
+}
+
+/* bday input date */
+.input-bday label{
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+/* Move calendar icon to the left */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 5px;
+    font-size: 1.2em;
+    color-scheme: dark;
+    line-height: 57px;
+}
+
+.input-bday input{ 
+    background: url(/*yourURLHere*/) no-repeat;
+    width: 25px;
+    height: 25px;
+    border-width: thin;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    padding: 0 35px 0;
+    position: space-between;
+}
+
+.input-bday{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+/* middle namae optiona input box */
+.input-middleOptional{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 30px 0;
+}
+
+.input-middleOptional label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+/* height effects of middle name */
+/* remove tilde ~ sign from valid after this doesn't matter using Required or not. */
+.input-middleOptional input:focus~label,
+.input-middleOptional input:optional label {
+    top: 0px;
+}
+
+
+
+.input-middleOptional input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    padding: 0 35px 0;
+}
+
+.input-middleOptional .icon{
     position: absolute;
     right: 8px;
     font-size: 1.2em;
@@ -251,6 +344,7 @@ transform: translateX(-400px);
 .btnLoginform{
     width: 100%;
     height: 45px;
+    margin-top: 5px;
     background: black;
     border: none;
     outline:none;
@@ -262,8 +356,10 @@ transform: translateX(-400px);
 }
 
 .btnGoogle{
-    width: 100%;
+    width: 45%;
     height: 45px;
+    margin-top: 10px;
+    /* margin-left: 85px; */
     background: black;
     border: none;
     outline:none;
@@ -303,12 +399,20 @@ button.btnGoogle:hover{
     background-color: #515151;
 } */
 
-.login-register{
+.login-google{
     font-size: .9em;
     color: white;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
+}
+
+.login-register{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0 10px;
 }
 
 .login-register p a{

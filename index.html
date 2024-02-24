@@ -7,7 +7,13 @@
     <title>Lori's Events</title>
 
     <link rel="stylesheet" href="./CSS/style.css">
-
+    <style>
+        body {
+    background-image: url('../Images/weddingscene.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+        }
+        </style>
 
 </head>
 
@@ -46,8 +52,11 @@
                     <a href="#">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btnLoginform">Login</button>
-                <!-- <button type="googlebtn" class="btnGoogle">Google</button> -->
+
+                <div class="login-google">
+                <p>Or continue with Google</p>
                 <button class="btnGoogle" href="#"><span></span>Google</button>
+                </div>
 
                 <div class="login-register">
                     <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
@@ -64,9 +73,9 @@
                     <input type="text" required>
                     <label>First Name</label>
                 </div>
-                <div class="input-box">
+                <div class="input-middleOptional">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" > <!--remove the word required attribute -->
+                    <input type="text" optional> <!--remove the word required attribute -->
                     <label>Middle Name (optional)</label>
                 </div>
                 <div class="input-box">
@@ -74,10 +83,10 @@
                     <input type="text" required>
                     <label>Last Name</label>
                 </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="date" required>
+                <div class="input-bday">
+                    <!-- <span class= "icon"><ion-icon name="balloon"></ion-icon></span> -->
                     <label>Birthday</label>
+                    <input type="date" required>
                 </div>
                 <div class="input-box"> <!-- need yo change this -->
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
